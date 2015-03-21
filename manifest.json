@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "Word Card app",
+  "version": "1.0",
+  
+  "description": "Show word card on new tab page.",
+
+  "icons": {
+    "128": "img/cards.png"
+  },
+
+  "browser_action": {
+    "default_icon": "img/cards.png"
+  },
+
+ "background": {
+    "scripts": ["listener.js"],
+    "persistent": false
+  },
+  
+
+  
+  "permissions": [
+                  "unlimitedStorage",
+                  "notifications",
+                  "<all_urls>"
+                  ]
+}
