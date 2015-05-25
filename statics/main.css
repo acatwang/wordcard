@@ -10,8 +10,24 @@
 	margin-bottom: 50px;
 }
 
-	.vocabulary{
+	.word-card .title{
 		margin:10px;
 		font-weight: bold;
 		font-size: 2em;
 	}
+
+	.word-card .voice img{
+		width: 42px;
+		height: 42px;
+	}
+
+	.word-card .definition{
+		margin-left: 60px;
+	}
+	.word-card .pos{
+		display: block;
+		margin:15px;
+		font-weight: bold;
+		font-size: 1em;
+	}
+
