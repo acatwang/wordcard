@@ -24,12 +24,13 @@
     "scripts": ["listener.js"],
     "persistent": false
   },
-  
 
-  
   "permissions": [
+                  "tabs",
                   "<all_urls>"
-                  ]
+                  ],
+
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com;object-src 'self'"
 }
 
 // What else manifest can do: https://developer.chrome.com/extensions/manifest
