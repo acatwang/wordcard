@@ -4,15 +4,18 @@ form {
 	margin: 0; 
 	padding: 0;}
 
-#word {
+#lookupword {
 	display: inline;
-	width:80%;
+	width:60%;
 }
 
 #addbtn{
 	display: inline;
 }
 
+#searchbtn{
+	display: inline;
+}
 .more {
 	margin:10px;
 }
