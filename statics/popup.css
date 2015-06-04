@@ -1,4 +1,7 @@
-body {width:350px}
+body {
+	width:350px;
+	/*height:500px;*/
+}
 
 form {
 	margin: 0; 
@@ -22,4 +25,11 @@ form {
 
 span {
 	margin-left: 5px; 
+}
+
+#definition {
+	display: none;
+	border-style: solid;
+	border-width: 1px;
+	margin:5px;
 }
