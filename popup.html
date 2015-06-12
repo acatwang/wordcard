@@ -10,15 +10,21 @@
 <body>
 	<form class="addWord">
 		<input type="text" id='lookupword' class='form-control' placeholder="Search or Add a words .." />
-		<button type="submit" id='addbtn' class="btn btn-primary">Add</button>
+		<button type="button" id='addbtn' class="btn btn-primary">Add</button>
 
 	 <button type="button" class="btn btn-primary" id='searchbtn'>Search</button>
 	</form>
 
-	<div id='definition' ng-controller="defController as def">
-		<h1> {{def.product.word}}</h1>
-		<p> {{def.product.pos}}</p>
-		<p> {{def.product.definition}}</p>
+	<div id="lookup">
+		<div id="word"><p></p></div>
+		<div id='definition' ng-controller="defController as def">
+			<p> {{word}}</p>
+			<p> {{def.words[i].partOfSpeech}}</p>
+			<p> {{def.words[i].text}}</p>
+		</div>
+	</div>
+	<div id='message'>
+		<p><b></b> has beed added to your cards</p>
 	</div>
 
 	<div class="more text-right">

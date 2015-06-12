@@ -1,4 +1,4 @@
-<html>
+<html ng-app="showcard">
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="statics/bootstrap-3.3.4/css/bootstrap.css"/>
@@ -8,14 +8,25 @@
 	<link rel="stylesheet" type="text/css" href="statics/slick/slick/slick-theme.css"/>
 	
 	<link rel="stylesheet" type="text/css" href="statics/main.css"/>
-
 </head>
 
 <body>
 
-	<h1> A new word a day, keeps the doctor away </h1>
 
-	<div class="slide-cards">
+	<div class="slide-cards" ng-controller="cardController as ctr">
+
+		<div class="word-card" ng-repeat="card in cards" >
+			<h1>{{"Angular"}}</h1>
+			<div class='card' >
+				<div class="row title">
+				  	<div class="vocabulary col-md-6">{{card.content}}</div>
+				  	<div class="voice col-md-2"> <img src="/img/speaker.png" /> </div>
+				</div>
+
+			</div>
+		</div>
+
+
 		<div class="word-card">
 		  	<div class="row title">
 			  	<div class="vocabulary col-md-6">pe·nul·ti·mate</div>
@@ -60,12 +71,13 @@
 	  
 	
 	<script src="statics/js/jquery.min.js"></script>
-	
+	<script src="statics/js/angular.min.js"></script>
+
 	<script src="statics/bootstrap-3.3.4/js/bootstrap.min.js"></script>
 	<script src="statics/slick/slick/slick.js"></script>
 
 	<script src="statics/js/main.js"></script>
-	<script src="statics/js/search.js"></script>
+	<script src="statics/js/cardApp.js"></script>
 
 </body>
 </html>
