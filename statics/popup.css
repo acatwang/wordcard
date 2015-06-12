@@ -28,8 +28,8 @@ span {
 }
 
 #definition {
-	display: none;
-	border-style: solid;
+/*	display: none;
+*/	border-style: solid;
 	border-width: 1px;
 	margin:5px;
 }

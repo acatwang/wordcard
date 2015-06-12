@@ -31,7 +31,7 @@
                   "http://api.wordnik.com/*"
                   ],
 
-  "content_security_policy": "script-src 'self' https://api.wordnik.com https://ajax.googleapis.com;object-src 'self'"
+  "content_security_policy": "script-src 'self' https://wordcard.herokuapp.com/ https://api.wordnik.com https://ajax.googleapis.com;object-src 'self'"
 }
 
 // What else manifest can do: https://developer.chrome.com/extensions/manifest

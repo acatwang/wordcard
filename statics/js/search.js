@@ -1,7 +1,7 @@
 
 function searchDict(word){
 	// need to relax content_security_policy in order to run the script
-	var dictAPI = "https://api.wordnik.com/v4/word.json/"+word+"/definitions?limit=200&includeRelated=true&sourceDictionaries=webster&useCanonical=true&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5";
+	var dictAPI = "https://wordcard.herokuapp.com/api/v1/words/wnlookup.json?word="+word;
 	
 	// Use JSONP to send cross-domain request
 	$.ajax({
@@ -11,7 +11,7 @@ function searchDict(word){
     	//jsonp: "callback",
  
 	    // Tell jQuery we're expecting JSONP
-	    dataType: "jsonp",
+	    dataType: "json",
 	    success: function( data ) {
 	    	console.debug('success');
         	console.log( data ); // server response
@@ -38,3 +38,14 @@ $('#searchbtn').click(function(){
 	console.log('searching');
 	searchDict(lookupword);
 });
+
+
+//angular
+(function (){
+	var worddef = {word:'hyper', pos:'adj',definition:'happy'} ;
+	var app = angular.module('define', []);
+  
+  	app.controller('defController', function(){
+  		this.product = worddef;
+  	})
+})();

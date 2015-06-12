@@ -1,4 +1,4 @@
-<html>
+<html ng-app="define">
 <head>
 	<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="statics/popup.css"/>
@@ -15,7 +15,10 @@
 	 <button type="button" class="btn btn-primary" id='searchbtn'>Search</button>
 	</form>
 
-	<div id='definition'>
+	<div id='definition' ng-controller="defController as def">
+		<h1> {{def.product.word}}</h1>
+		<p> {{def.product.pos}}</p>
+		<p> {{def.product.definition}}</p>
 	</div>
 
 	<div class="more text-right">
@@ -24,6 +27,7 @@
 	</div>
 
 
+	<script src="statics/js/angular.min.js"></script>
 
 	<script src="statics/js/jquery.min.js"></script>
 	<script src="statics/js/search.js"></script>
