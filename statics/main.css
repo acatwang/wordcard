@@ -6,30 +6,27 @@
 	margin-top: 30px; 
 }
 
-.word-card{
-	border-style: solid;
-	margin-top:50px;
-	margin-bottom: 50px;
+#new_word_bar {
+	position:absolute;
+	left:40%;
+	top:10%;
 }
 
-	.word-card .title{
-		margin:10px;
-		font-weight: bold;
-		font-size: 2em;
-	}
+#slides_control > div{
+  height: 200px;
+}
 
-	.word-card .voice img{
-		width: 42px;
-		height: 42px;
-	}
+#slides_control {
+  	position:absolute;
+  	width: 400px;
+  	left:50%;
+  	top:35%;
+	margin-left:-200px;
+}
 
-	.word-card .definition{
-		margin-left: 60px;
-	}
-	.word-card .pos{
-		display: block;
-		margin:15px;
-		font-weight: bold;
-		font-size: 1em;
-	}
+.carousel-caption{
+	position:static;
+	color:red;
+	background: border-box;
 
+}
