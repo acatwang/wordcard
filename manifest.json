@@ -1,4 +1,7 @@
 {
+  // Manifest are the JSON file required for every chrome extention
+  // What else manifest can do: https://developer.chrome.com/extensions/manifest
+
   "manifest_version": 2,
   "name": "Word Card app",
   "version": "1.0",
@@ -6,11 +9,11 @@
   "description": "Show word card on new tab page.",
 
   "icons": {
-    "128": "img/cards.png"
+    "128": "statics/img/cards.png"
   },
 
   "browser_action": {
-    "default_icon": "img/cards.png",
+    "default_icon": "statics/img/cards.png",
     "default_popup": "popup.html",
     "default_title": "View Option in Word Card"
   },
@@ -34,4 +37,3 @@
   "content_security_policy": "script-src 'self' https://wordcard.herokuapp.com/ https://api.wordnik.com https://ajax.googleapis.com;object-src 'self'"
 }
 
-// What else manifest can do: https://developer.chrome.com/extensions/manifest
