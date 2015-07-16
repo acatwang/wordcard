@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04eab7c1-f1bd-426f-9502-74b88e1b579a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/main.css" afterPath="$PROJECT_DIR$/statics/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/js/main_controller.js" afterPath="$PROJECT_DIR$/statics/js/main_controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myPage.html" afterPath="$PROJECT_DIR$/myPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wordcard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,8 +31,8 @@
       <file leaf-file-name="myPage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="720">
-              <caret line="24" column="48" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="48" />
+            <state vertical-scroll-proportion="-3.7083333" vertical-offset="1" max-vertical-offset="720">
+              <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -42,10 +40,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/statics/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8974359" vertical-offset="0" max-vertical-offset="660">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
               <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
               <folding />
             </state>
@@ -62,12 +60,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_controller.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main_controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/statics/js/main_controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.232143" vertical-offset="656" max-vertical-offset="1260">
-              <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
-              <folding />
+            <state vertical-scroll-proportion="2.1833649" vertical-offset="0" max-vertical-offset="1350">
+              <caret line="106" column="12" selection-start-line="106" selection-start-column="12" selection-end-line="106" selection-end-column="12" />
+              <folding>
+                <element signature="e#805#923#0" expanded="false" />
+                <element signature="e#952#1226#0" expanded="false" />
+                <element signature="e#1255#1763#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,9 +84,9 @@
       <list>
         <option value="$PROJECT_DIR$/statics/js/main.js" />
         <option value="$PROJECT_DIR$/statics/js/cardApp.js" />
-        <option value="$PROJECT_DIR$/statics/js/main_controller.js" />
-        <option value="$PROJECT_DIR$/myPage.html" />
         <option value="$PROJECT_DIR$/statics/main.css" />
+        <option value="$PROJECT_DIR$/myPage.html" />
+        <option value="$PROJECT_DIR$/statics/js/main_controller.js" />
       </list>
     </option>
   </component>
@@ -505,10 +507,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/statics/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/myPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="720">
-          <caret line="24" column="48" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="48" />
+        <state vertical-scroll-proportion="-3.7083333" vertical-offset="1" max-vertical-offset="720">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
           </folding>
@@ -517,17 +527,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/statics/js/main_controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.232143" vertical-offset="656" max-vertical-offset="1260">
-          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statics/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8974359" vertical-offset="0" max-vertical-offset="660">
-          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-          <folding />
+        <state vertical-scroll-proportion="2.1833649" vertical-offset="0" max-vertical-offset="1350">
+          <caret line="106" column="12" selection-start-line="106" selection-start-column="12" selection-end-line="106" selection-end-column="12" />
+          <folding>
+            <element signature="e#805#923#0" expanded="false" />
+            <element signature="e#952#1226#0" expanded="false" />
+            <element signature="e#1255#1763#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

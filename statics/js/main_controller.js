@@ -7,7 +7,32 @@ app.factory('db', function($http, $q){
     var GETWORD_API = "https://wordcard.herokuapp.com/api/v1/words/from_user.json?user_id=1&limit=10&offset=0";
     var LOOKUP_API = "http://wordcard.herokuapp.com/api/v1/words/wnlookup.json?word=";
     var db = {};
-    var cards = [];
+    var _slides = [];
+
+    var appendWords = function(data){
+        for (var i=0;i<data.length;i++){
+            _slides.push(data[i]);
+        }
+    }
+
+    var appendDefs = function(data){
+        for (var i=0;i<data.length;i++){
+            _slides[i].definition = data[i].data;
+        }
+    }
+
+    db.getSlides = function(){
+        return _slides;
+    }
+
+    db.setSlides = function(slides){
+        _slides = slides
+    }
+
+    db.makeSlides = function(){
+        $q.all([db.getCards(), db.getDefs()]).then(function(data){appendWords(data[0]),appendDefs(data[1])});
+
+    }
     db.getCards = function(){
         var deferred = $q.defer();
         $http({
@@ -20,7 +45,7 @@ app.factory('db', function($http, $q){
         return deferred.promise
     }
 
-    db.lookup = function(){
+    db.getDefs = function(){
        return $http.get(GETWORD_API)
             .then(function(results){
                 return results.data;
@@ -38,6 +63,35 @@ app.factory('db', function($http, $q){
             })
     }
 
+    db.lookUpDef = function(word){
+        var deferred = $q.defer();
+        $http({
+            method:'GET',
+            url:LOOKUP_API+word
+        })
+            .success(function(data){deferred.resolve(data)})
+            .error(function(){deferred.reject('Error')})
+
+        return deferred.promise
+    }
+
+    db.findWord = function(newWord){
+        var newCard={};
+        newCard.content = newWord;
+        console.log('find');
+        db.lookUpDef(newWord).then(function(response) {
+            console.log(response);
+            newCard.definition = response;
+
+            _slides.unshift(newCard);
+            console.log(newCard);
+            console.log(_slides[0]);
+            _slides[0].active = true;
+        });
+
+
+
+    }
     return db;
 })
 
@@ -45,35 +99,16 @@ app.factory('db', function($http, $q){
 
 app.controller('carouselCtrl',function($scope,$q,db){
 
-    $scope.slides = [];
+    //db.lookup().then(function(response){console.log(response)});
 
-    var appendWords = function(data){
-        for (var i=0;i<data.length;i++){
-            $scope.slides.push(data[i]);
-        }
-    }
+    //$q.all([db.getCards(), db.getDefs()]).then(function(data){appendWords(data[0]),appendDefs(data[1])});
 
-    var appendDefs = function(data){
-        for (var i=0;i<data.length;i++){
-            $scope.slides[i].definition = data[i].data;
-        }
-    }
+    db.makeSlides();
+    $scope.slides = db.getSlides();
 
-    //db.getCards().then(function(results){
-    //    $scope.slides = results;
-    //    console.log($scope.slides);
-    //
-    //})
-
-    db.lookup().then(function(response){console.log(response)});
-
-    $q.all([db.getCards(), db.lookup()]).then(function(data){appendWords(data[0]),appendDefs(data[1])});
-
-
-    $scope.addCard = function(){
-        $scope.slides.unshift({content:$scope.newWord});
-        $scope.slides[0].active=true;
+    $scope.findWord = function(){
+        db.findWord($scope.newWord);
         $scope.newWord="";
-
     }
+
 })
