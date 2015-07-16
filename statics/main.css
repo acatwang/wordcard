@@ -12,21 +12,28 @@
 	top:10%;
 }
 
-#slides_control > div{
-  height: 200px;
-}
 
 #slides_control {
   	position:absolute;
-  	width: 400px;
-  	left:50%;
+  	width: 600px;
+  	left:40%;
   	top:35%;
 	margin-left:-200px;
 }
 
-.carousel-caption{
-	position:static;
-	color:red;
-	background: border-box;
+	#slides_control > div{
+	  height: 300px;
+	}
 
-}
+
+	.carousel-caption{
+		position:static;
+		color:red;
+		background: border-box;
+
+	}
+
+	.word-explaination li{
+		color:#000000;
+		text-align: left;
+	}

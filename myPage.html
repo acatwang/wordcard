@@ -22,6 +22,10 @@
 				<div class="carousel-caption">
 					<h1>{{slide.content}}</h1>
 					<p>No. {{$index+1}}</p>
+					<ul class="word-explaination" ng-repeat="def in slide.definition |limitTo:3">
+						<li><span>({{def.partOfSpeech}})</span> {{def.text}}</li>
+					</ul>
+					<!--p>{{slide.definition}}</p-->
 				</div>
 
 			</slide>
