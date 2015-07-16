@@ -95,8 +95,6 @@ app.factory('db', function($http, $q){
     return db;
 })
 
-
-
 app.controller('carouselCtrl',function($scope,$q,db){
 
     //db.lookup().then(function(response){console.log(response)});
