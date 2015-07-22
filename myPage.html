@@ -8,6 +8,7 @@
 
 <body ng-controller="carouselCtrl">
 
+	<!-- SEARCH BAR -->
 	<div id="new_word_bar">
 		<form ng-submit="findWord()">
 			<label> Read a new word? </label>
@@ -16,16 +17,21 @@
 		</form>
 	</div>
 
+	<!-- WORD CARDS-->
 	<div id="slides_control">
 		<carousel>
 			<slide ng-repeat="slide in slides" active="slide.active">
 				<div class="carousel-caption">
 					<h1>{{slide.content}}</h1>
-					<p>No. {{$index+1}}</p>
+					<p>No. {{$index+1}}</p> <!-- TODO: -->
 					<ul class="word-explaination" ng-repeat="def in slide.definition |limitTo:3">
 						<li><span>({{def.partOfSpeech}})</span> {{def.text}}</li>
 					</ul>
 					<!--p>{{slide.definition}}</p-->
+				</div>
+				<div>
+				<p> This is the __ time you read this card </p>
+				<span class="glyphicon glyphicon-th-list"></span>
 				</div>
 
 			</slide>
