@@ -23,10 +23,21 @@
   },
 
 
- "background": {
-    "scripts": ["listener.js"],
+  "background": {
+    "scripts": ["statics/js/jquery.min.js","statics/js/background.js"],
     "persistent": false
   },
+
+  "content_scripts": [
+        {
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+            ],
+        "js": ["statics/js/jquery.min.js","statics/js/content.js"],
+          "run_at": "document_end"
+        }
+    ],
 
   "permissions": [
                   "tabs",

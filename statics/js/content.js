@@ -7,6 +7,6 @@ function getBgColors (tab) {
   alert('The browser action was clicked! Yay!');
 }
 
-// When the browser action is clicked, call the
-// getBgColors function.
-chrome.browserAction.onClicked.addListener(getBgColors);
+$(document).ready(
+    $(window).dblclick(getBgColors)
+)
