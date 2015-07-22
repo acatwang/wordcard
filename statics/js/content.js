@@ -1,12 +1,32 @@
-// This function will eventually contain some logic
-// for receiving background-color values from the
-// current tab.
-function getBgColors (tab) {
-  // But for now, let's just make sure what we have so
-  // far is working as expected.
-  alert('The browser action was clicked! Yay!');
+//ToDo: add description on content.js
+
+if (!window.WordApp){
+  WordApp = {}
+}
+
+WordApp.Selector = {};
+WordApp.Selector.getSelected = function(){
+  var selectObj = '';
+  if(window.getSelection){
+    selectObj = window.getSelection();
+  }
+  else if(document.getSelection) {
+    selectObj =document.getSelection();
+  }
+  else if(document.selection){
+    selectObj = document.selection.createRange().text;
+  }
+  return selectObj.toString();
+}
+
+function selectWords(event) {
+  var selected = WordApp.Selector.getSelected();
+  if(/[a-zA-Z]/.test(selected)){
+    console.log(selected);
+  };
+  console.log($(event.target));
 }
 
 $(document).ready(
-    $(window).dblclick(getBgColors)
+    $(window).dblclick(selectWords)
 )
