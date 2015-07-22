@@ -19,11 +19,30 @@ WordApp.Selector.getSelected = function(){
   return selectObj.toString();
 }
 
+function define(voc){
+  var DICT_API ="https://wordcard.herokuapp.com/api/v1/words/wnlookup.json?word=";
+  var definition = {};
+  var promise = $.ajax({
+                  url: DICT_API+voc,
+                  method: "GET"
+                })
+  return promise
+
+}
+
 function selectWords(event) {
   var selected = WordApp.Selector.getSelected();
+  var definition = [];
+
   if(/[a-zA-Z]/.test(selected)){
     console.log(selected);
+    define(selected).success(function(responce){
+        console.log(responce);
+        definition = responce;
+    });
   };
+
+
   console.log($(event.target));
 }
 
